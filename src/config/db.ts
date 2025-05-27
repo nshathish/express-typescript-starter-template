@@ -1,5 +1,7 @@
 import mysql from 'mysql2/promise';
 
+import logger from '@/config/logger';
+
 export let db: mysql.Connection;
 
 export async function connectDB(): Promise<void> {
@@ -10,9 +12,9 @@ export async function connectDB(): Promise<void> {
       password: process.env.DB_PASSWORD || 'Password123!',
       database: process.env.DB_NAME || 'orders_db',
     });
-    console.log('[✓] Connected to MySQL');
+    logger.info('[✓] Connected to MySQL');
   } catch (err) {
-    console.error('[✗] MySQL connection failed:', err);
+    logger.error('[✗] MySQL connection failed:', err);
     process.exit(1);
   }
 }
