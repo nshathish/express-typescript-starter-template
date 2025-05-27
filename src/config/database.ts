@@ -13,8 +13,12 @@ const sequelize = new Sequelize({
 
 export const initializeDatabase = async () => {
   await sequelize.authenticate();
-  await sequelize.sync({ alter: true });
-  logger.info('🚀 Connected to MySQL');
+  if (process.env.NODE_ENV !== 'production') {
+    await sequelize.sync({ alter: true });
+    logger.info('🚀 Connected to MySQL');
+  } else {
+    logger.warn('⚠️ Skipping database schema synchronization in production. Use a migration tool.');
+  }
 };
 
 export default sequelize;
