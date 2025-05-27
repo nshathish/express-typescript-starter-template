@@ -138,3 +138,6 @@ dist
 
 # IDE
 .idea/
+
+# MySQL Data folder
+db_data/

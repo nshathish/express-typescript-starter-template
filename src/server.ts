@@ -1,11 +1,13 @@
 import app from '@/app';
+
 import logger from '@/config/logger';
-import { connectDB } from '@/config/db';
+
+import { initializeDatabase } from '@/config/database';
 
 const PORT = process.env.PORT || 8000;
 
 async function bootstrap() {
-  await connectDB();
+  await initializeDatabase();
 
   app.listen(PORT, () => {
     logger.info(`🚀 Server is running on http://localhost:${PORT}`);
