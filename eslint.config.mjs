@@ -27,7 +27,7 @@ export default defineConfig([
           caughtErrorsIgnorePattern: '^_',
         },
       ],
-      // 'no-console': 'error',
+      'no-console': 'error',
       'prefer-const': 'error',
 
       // TypeScript specific rules
