@@ -1,7 +1,7 @@
 import express, { Express } from 'express';
 import cors from 'cors';
 
-import userRouter from '@/routes/user';
+import userRouter from '@/routes/user.route';
 import { errorHandler, notFoundHandler } from '@/middlewares/error.middleware';
 
 class App {
