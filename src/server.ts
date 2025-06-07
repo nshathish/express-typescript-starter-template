@@ -10,7 +10,7 @@ async function bootstrap() {
   await initializeDatabase();
 
   app.listen(PORT, () => {
-    logger.info(`🚀 Server is running on http://localhost:${PORT}`);
+    logger.info(`🚀 Server is running on http://localhost:${PORT}!`);
   });
 }
 

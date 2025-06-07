@@ -1,0 +1,1 @@
+### The branch `feature/use-swc-nodemon-setup` is used to test the integration of SWC with Nodemon.
