@@ -1,8 +1,8 @@
 import app from '@/app';
 
-import logger from '@/config/logger';
-
 import { initializeDatabase } from '@/config/database';
+
+import logger from '@/config/logger';
 
 const PORT = process.env.PORT || 8000;
 
